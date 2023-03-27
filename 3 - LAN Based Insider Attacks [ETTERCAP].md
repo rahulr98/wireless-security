@@ -62,3 +62,27 @@
 ![dns](https://user-images.githubusercontent.com/116432525/227794011-9127adbf-49c1-4cff-994e-1a5709cd4922.png)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**4. Invoke ‘sslstrip tool’ for stealing passwords from any machine that is connected to a LAN by stripping the HTTPS connection.**
+  
+   **SSLstrip -** It is a type of tool designed to demonstrate the effectiveness of HTTPS stripping attacks.
+            - HTTPS stripping is a type of man-in-the-middle attack where the attacker intercepts the communication between a client and a server and downgrades the HTTPS connection to an unencrypted HTTP connection. This allows the attacker to view and modify the data being transmitted between the client and server.
+            - SSLstrip works by intercepting HTTPS requests and redirecting them to HTTP requests. It then replaces all HTTPS links in the response with HTTP links, so the client continues to communicate with the server over an unencrypted connection. As a result, the attacker can see all the data transmitted between the client and server in plaintext.
+
+![sslstrip](https://user-images.githubusercontent.com/116432525/228005659-e507c78a-d91d-413e-9e19-828f29a58993.png)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**5. Use arp_cop and scan_poisoner plugins to learn about the detection of ARP attacks.**
+
+   **arp_cop -** It reports suspicious ARP activity by passively monitoring ARP requests/replies. It can report ARP posioning attempts, or simple IP-conflicts or IP-changes. If you build the initial host list the plugin will run more accurately.
+   
+![arp cop](https://user-images.githubusercontent.com/116432525/228008221-2215af98-c06a-4f4c-9709-43bc70646ec0.png)
+
+  **scan_poisoner -** This plugin check if someone is poisoning between some host in the list and us.First of all it checks if two hosts in the list have the same mac address. It could mean that one of those is poisoning us pretending to be the other. It could generate many false-positives in a proxy-arp environment.
+
+![scan poisoner](https://user-images.githubusercontent.com/116432525/228008938-68895543-6d99-4ed7-a51f-67ac48e34b70.png)
+
+![arp poi2](https://user-images.githubusercontent.com/116432525/228009092-1cab1a12-5ff4-4a32-aef3-718fb60fd50b.png)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
