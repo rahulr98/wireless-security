@@ -65,13 +65,42 @@
    
    ![qwe](https://user-images.githubusercontent.com/116432525/230719364-7d38765a-7ce9-4c08-888d-efde3181a1b1.png)
 
-# 4. After capturing the required files for testing, use dictionary generation and password 
-cracking tools to crack the Wi-Fi password. 
-a. You must use an existing word file to crack the password.
-b. Also you have to create your dictionary file for cracking the passwords.
-c. Keep 3 different types of passwords for your Wi-Fi to test it. Simple, medium, and 
-complex passwords can be used for testing. Simple can be a dictionary word, 
-medium can be of dictionary word with some numbers, and complex can be 
-generated from any password generator online. #
+# 4. After capturing the required files for testing, use dictionary generation and password cracking tools to crack the Wi-Fi password. #
+### a. You must use an existing word file to crack the password. ###
+### b. Also you have to create your dictionary file for cracking the passwords. ###
+### c. Keep 3 different types of passwords for your Wi-Fi to test it. Simple, medium, and complex passwords can be used for testing. Simple can be a dictionary word, medium can be of dictionary word with some numbers, and complex can be generated from any password generator online. ###
 
+   -  Password = `c6dp6m2k`
+   -  First, we try to crack a hard password which was set as password for the wifi AP named `realme 10 pro 5g`.
+   -  command used `aircrack-ng WPAcrack-03.cap  -w /usr/share/wordlists/rockyou.txt`
+
+![2023-04-08_22-39](https://user-images.githubusercontent.com/116432525/230734125-1511eaac-b372-4282-87d9-04e341adbb12.png)
    
+   -  Weak password can be cracked in less time using aircrack-ng.
+   -  aircrack-ng testt.cap -w /usr/share/wordlists/rockyou.txt
+ 
+ ![gh](https://user-images.githubusercontent.com/116432525/230734214-8cc666b2-e692-4538-93cd-50e88affb57a.png)
+
+   we have our password for the wifi AP which has WPA2 encryption which is raymond23.
+   
+# 5. Use Rouge AP (WifiPhisher) to create an Evil twin, perform a basic phishing attack using this rouge AP, and document the difference between the two attacks you have performed #
+
+# 6. Learn the protocol level working of WPA3 and how it differs from WPA2. #
+
+  - WPA3 (Wi-Fi Protected Access III) is a security protocol for wireless networks and is the successor to WPA2. It was introduced in 2018 and provides stronger security for Wi-Fi networks. The main differences between WPA3 and WPA2 are in the protocol level working and the encryption algorithms used.
+
+   - WPA3 uses a new encryption algorithm called "Simultaneous Authentication of Equals" (SAE) which replaces the "Pre-Shared Key" (PSK) authentication used in WPA2. SAE is a more secure method of authentication that protects against offline attacks by using a "password-equivalent" value that is never transmitted over the network.
+
+   - Another significant change in WPA3 is the introduction of a new security feature called "Protected Management Frames" (PMF). PMF protects against certain types of attacks that can be used to disrupt Wi-Fi networks, such as deauthentication attacks.
+
+   - In terms of the protocol level working, WPA3 also introduces improvements in the key exchange process. WPA2 uses the "four-way handshake" to establish a secure connection between a device and an access point. However, this method is vulnerable to attacks such as the "KRACK" (Key Reinstallation Attack) which exploits weaknesses in the key exchange process. WPA3 uses a new key exchange process called "Dragonfly" which is more secure and resistant to attacks.
+
+   - In summary, the main differences between WPA3 and WPA2 are the encryption algorithm used for authentication, the introduction of Protected Management Frames, and improvements to the key exchange process. These changes make WPA3 a more secure protocol for wireless networks.
+  
+    
+Reference Links: [Not Limited]
+1. https://github.com/wifiphisher/wifiphisher
+2. https://web.stanford.edu/class/ee26n/Assignments/Assignment7.html
+3. https://www.wifi-professionals.com/2019/01/4-way-handshake
+4. https://nooblinux.com/crack-wpa-wpa2-wifi-passwords-using-aircrack-ng-kali-linux/
+5. https://en.wikipedia.org/wiki/IEEE_802.1
