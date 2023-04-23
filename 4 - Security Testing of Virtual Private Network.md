@@ -21,9 +21,9 @@ conn devgateway1
         auto=start
         keyexchange=ikev1
         authby=secret
-        left=192.168.180.209
+        left=10.0.2.15
         # leftsubnet=192.168.0.101/24
-        right=192.168.180.228
+        right=10.0.2.4
         # rightsubnet=10.0.2.15/24
         ike=aes256-sha1-modp1024!
         esp=aes256-sha1!
@@ -46,9 +46,9 @@ conn devgateway2
         auto=start
         keyexchange=ikev1
         authby=secret
-        left=192.168.180.209
+        left=10.0.2.15
         # leftsubnet=192.168.0.101/24
-        right=192.168.180.228
+        right=10.0.2.4
         # rightsubnet=10.0.2.15/24
         ike=aes256-sha1-modp1024!
         esp=aes256-sha1!
